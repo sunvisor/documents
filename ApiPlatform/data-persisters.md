@@ -2,10 +2,10 @@
 
 > [オリジナル](https://api-platform.com/docs/core/data-persisters/)
 
-A data persister using [Doctrine ORM](https://www.doctrine-project.org/projects/orm.html) is included with the library and
-is enabled by default. It is able to persist and delete objects that are also mapped as [Doctrine entities](https://www.doctrine-project.org/projects/doctrine-orm/en/current/reference/basic-mapping.html).
-A [Doctrine MongoDB ODM](https://www.doctrine-project.org/projects/mongodb-odm.html) data persister is also included and can be enabled by following the [MongoDB documentation](mongodb.md).
-POST`, `PUT`, `PATCH`, `DELETE` [operations](operation.md)の実行中にアプリケーションの状態を変更するために、API Platform は **データパーシスタ** と呼ばれるクラスを使用します。
+[Doctrine ORM](https://www.doctrine-project.org/projects/orm.html) を使ったデータパーシスタがライブラリに含まれており、デフォルトで有効になっています。これは [Doctrine エンティティ](https://www.doctrine-project.org/projects/doctrine-orm/en/current/reference/basic-mapping.html) としてマッピングされたオブジェクトの永続化と削除を行うことができます。
+[Doctrine MongoDB ODM](https://www.doctrine-project.org/projects/mongodb-odm.html) のデータパーシスタも含まれており、[MongoDB documentation](mongodb.md) を参照して有効にすることができます。
+
+`POST`, `PUT`, `PATCH`, `DELETE` [オペレーション](operation.md)の実行中にアプリケーションの状態を変更するために、API Platform は **データパーシスタ** と呼ばれるクラスを使用します。
 データパーシスタは、APIリソースとしてマークされたクラスのインスタンスを受け取ります (通常は `@ApiResource` アノテーションを使用します)。
 このインスタンスには、[デシリアライズ処理](serialization.md)の際にクライアントから送信されたデータが格納されます。
 
@@ -54,9 +54,9 @@ final class BlogPostDataPersister implements ContextAwareDataPersisterInterface
 }
 ```
 
-サービスのオートワイヤリングとオートコンフィグレーションが有効になっていれば(デフォルトで有効になっています)、完了です。
+サービスのオートワイヤリングとオートコンフィグレーションが有効になっていれば (デフォルトで有効になっています)、完了です。
 
-そうでない場合は、カスタムの依存性注入設定を使用している場合は、対応するサービスを登録して `api_platform.data_persister` タグを追加する必要があります。`priority` 属性は、パーシスタの順番を決めるために使用できます。
+そうではなくカスタムの依存性注入設定を使用している場合は、対応するサービスを登録して `api_platform.data_persister` タグを追加する必要があります。パーシスタの順番を決めるために`priority` 属性を使用できます。
 
 ```yaml
 # api/config/services.yaml

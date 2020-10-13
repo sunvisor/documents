@@ -1,4 +1,4 @@
-# Running tests
+# テストの実行
 
 Sencha WebTestIt で作成したテストをローカルマシン、リモートシステム、または Selenium グリッド上で実行することができます。
 

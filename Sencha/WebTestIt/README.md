@@ -1,0 +1,50 @@
+WebTestIt ドキュメント目次
+=======================
+
+- Sencha WebTestIt を始める
+    - [概要](./GettingStarted/Introduction.md)
+    - [基礎](./GettingStarted/Fundamentals.md)
+    - [Sencha WebTestItの設定](./GettingStarted/SettingUpSenchaWebTestIt.md)
+    - [Sencha WebTestIt の概要](./GettingStarted/SenchaWebTestItOverview.md)
+    - [クイックスタート: 最初のテストを作成する](./GettingStarted/QuickStart.md)
+    - [Sencha WebTestItで使用する Java JDK のセットアップ方法](./GettingStarted/HowToSetupTheJavaJDKForUseWithSenchaWebTestIt.md)
+    - [Python と Sencha WebTestItを使い始める](./GettingStarted/GettingStartedWithPythonAndSenchaWebTestIt.md)
+- ウェブサイトやアプリの自動化 
+    - [概要](./Automation/Introduction.md)
+    - [Elements](./Automation/Elements.md)
+    - [GUIテストのコンポーネント](./Automation/Components.md)
+- ページオブジェクト
+    - [概要](./PageObjects/Introduction.md)
+    - [Managing page objects](./PageObjects/ManagingPageObjects.md)
+- テストの実行
+    - [概要](./RunningTests/Introduction.md)
+    - [WebDriver の実行についての説明](./RunningTests/WebdriverExecution.md)
+    - [テストの実行方法](./RunningTests/HowTo.md)
+    - [レポート](./RunningTests/Reporting.md)
+- Sencha WebTestIt でテストを管理する
+    - [概要](./Maintenance/Introduction.md)
+    - [診断モード](./Maintenance/DiagnosticMode.md)
+    - [ベストプラクティス](./Maintenance/BestPractices.md)
+- Advanced Topics
+    - [概要]()
+    - [上級者向けのコツ]()
+    - [Git を使ったソース管理]()
+    - [テストと課題管理との統合]()
+    - [CI 環境への統合]()
+    - [テストレポートのカスタマイズ]()
+    - [既存のプロジェクトで Sencha WebTestIt を使用する]()
+    - [ルックスの調整とデフォルトレイアウトの復元](./AdvancedTopics/AdjustingTheLooksAndRestoringTheDefaultLayout.md)
+    - [ページオブジェクトの構造化](./AdvancedTopics/StructuringYourPageObjects.md)
+    - [ページオブジェクトとテストファイルのヘッダについて]()
+    - [レポートテンプレートの調整](./AdvancedTopics/AdjustingTheReportTemplate.md)
+    - [Android 端末の接続方法](./AdvancedTopics/HowToConnectAnAndroidDevice.md)
+    - [Javaでのデータ駆動型テストのサンプル](./AdvancedTopics/DataDrivenTestingInJavaSample.md)
+    - [Sencha WebTestIt スニペットを使う]()
+    - [TestRail を使う]()
+    - [Jira を使う](./AdvancedTopics/GettingStartedWithJira.md)
+    - [CLI モードで Sencha WebTestIt を実行する](./AdvancedTopics/RunningSenchaWebtestitInCliMode.md)
+    - [継続的インテグレーションのために Jenkins で Sencha WebTestIt を実行する]()
+    - [継続的インテグレーションのために TFS/VSTS でSencha WebTestIt を実行する]()
+    - [ドラッグ＆ドロップの実行方法]()
+    - [エレメントのスクリーンショット]()
+    - [Node.js と np の設定方法]()

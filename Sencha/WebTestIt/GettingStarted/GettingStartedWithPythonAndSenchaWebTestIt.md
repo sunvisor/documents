@@ -80,7 +80,7 @@ Sencha WebTestItを開いたら、以下の手順で新しいプロジェクト�
     
 ## ページオブジェクトの作成
 
-PythonでWeb GUIをテストするには、セレクタを使ってWebページの要素を探す必要があります。Sencha WebTestItでは、推奨されている[Page Object pattern](./advanced-topics/structuring-your-page-objects.html)を利用してセレクタを整理しています。ヘッダーやメニュー、コンテンツ領域など、Webページ上の重要なコンポーネントに対してページオブジェクトを作成することで、コンポーネントごとのWeb要素の扱いが格段に楽になり、テストのメンテナンス性が向上します。
+PythonでWeb GUIをテストするには、セレクタを使ってWebページのエレメントを探す必要があります。Sencha WebTestItでは、推奨されている[Page Object pattern](./advanced-topics/structuring-your-page-objects.html)を利用してセレクタを整理しています。ヘッダーやメニュー、コンテンツ領域など、Webページ上の重要なコンポーネントに対してページオブジェクトを作成することで、コンポーネントごとのWebエレメントの扱いが格段に楽になり、テストのメンテナンス性が向上します。
 
 Sencha WebTestItでPythonプロジェクトを作成したら、次はページオブジェクトを作成します。
 
@@ -106,11 +106,11 @@ Header コンポーネントのページオブジェクトの名前は `header_p
 
 ## ページオブジェクトのアクションを作成する
 
-すべての要素をページオブジェクトに追加したので、それらに対していくつかのアクションを起こしてみましょう。
+すべてのエレメントをページオブジェクトに追加したので、それらに対していくつかのアクションを起こしてみましょう。
 
-**Elements** タブからページオブジェクトのコードに要素をドラッグ＆ドロップします。Sencha WebTestIt はアクションを反映したメソッドを作成します。
+**Elements** タブからページオブジェクトのコードにエレメントをドラッグ＆ドロップします。Sencha WebTestIt はアクションを反映したメソッドを作成します。
 
-まず `_search_input` を `header_po` のコードにドラッグします。マウスを離すとドロップダウンメニューが表示されるので、メソッドに反映させたいアクションを選択することができます。この要素の場合は、ポップアップメニューから `Do > Type into element` を選択してテキストを送信します。
+まず `_search_input` を `header_po` のコードにドラッグします。マウスを離すとドロップダウンメニューが表示されるので、メソッドに反映させたいアクションを選択することができます。このエレメントの場合は、ポップアップメニューから `Do > Type into element` を選択してテキストを送信します。
 
 <img src="https://docs.sencha.com/webtestit/guides/images/python-gif-page.gif" width="700px" />
 
@@ -123,7 +123,7 @@ def insert_search_text(self, text):
     return self
 ```
 
-残りの要素については `header_po` の中のドラッグ＆ドロップを繰り返しますが、今回はポップアップメニューから `Get > Element's text` を選択します。コードは以下のようになります。
+残りのエレメントについては `header_po` の中のドラッグ＆ドロップを繰り返しますが、今回はポップアップメニューから `Get > Element's text` を選択します。コードは以下のようになります。
 
 ```python
 def get_cart_amount(self):
@@ -137,12 +137,12 @@ def get_cart_count(self):
     return cart_count_text
 ```
 
-同様に、すべての要素を `detail_page_po` のコードに追加し、それぞれに適切なアクションを選択します。
-例えば、ボタンの場合は `Do > Click on element`、テキスト要素の場合は `Get > Element's text` などです。 
+同様に、すべてのエレメントを `detail_page_po` のコードに追加し、それぞれに適切なアクションを選択します。
+例えば、ボタンの場合は `Do > Click on element`、テキストエレメントの場合は `Get > Element's text` などです。 
 
 You can view the list of all actions on elements available in Sencha WebTestIt [here](../page-objects/managing-page-objects.html).
 
-Sencha WebTestIt で利用可能な要素に対するすべてのアクションのリストは[ここ](../PageObjects/ManagingPageObjects.md) で見ることができます。
+Sencha WebTestIt で利用可能なエレメントに対するすべてのアクションのリストは[ここ](../PageObjects/ManagingPageObjects.md) で見ることができます。
 
 最終的には、`detail_page_po` のメソッドは以下のようになります。
 
@@ -168,11 +168,11 @@ def get_confirmation_message(self):
     return cart_confirmation_message_text
 ```
 
-自由にすべてのアクションを編集でき、要素をドラッグしてメソッドを新しく生成できることを覚えておいてください。
+自由にすべてのアクションを編集でき、エレメントをドラッグしてメソッドを新しく生成できることを覚えておいてください。
 
 ## テストを書く
 
-すべての要素を追加してアクションを開始したら、テストを作成します。
+すべてのエレメントを追加してアクションを開始したら、テストを作成します。
 
 1.  プロジェクトツリーの **Tests** フォルダを右クリックして、**New \> Test file** を選択します。
 

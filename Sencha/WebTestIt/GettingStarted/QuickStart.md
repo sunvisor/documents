@@ -91,7 +91,7 @@ THEN 確認メッセージが表示される<br />
 
 ### ページオブジェクトの作成
 
-テストケースに必要なすべての要素にアクセスするには、それらの要素のセレクタを作成する必要があります。セレクタはページオブジェクトにまとめられています。セレクタについての詳細は[こちら](./automation/elements.html) を参照してください。
+テストケースに必要なすべてのエレメントにアクセスするには、それらのエレメントのセレクタを作成する必要があります。セレクタはページオブジェクトにまとめられています。セレクタについての詳細は[こちら](./automation/elements.html) を参照してください。
 まだページオブジェクトファイルを持っていないので、ページオブジェクトを作成する必要があります。
 
 > ![](https://docs.sencha.com/webtestit/guides/images/note-icon.png) **Note**
@@ -120,21 +120,23 @@ THEN 確認メッセージが表示される<br />
 
 Tシャツを検索することから始めましょう。現実の世界では、ユーザーは検索入力をクリックして検索語を入力します。テストの自動化は本質的にユーザーをシミュレートしていることを覚えておいてください。だからこそ、まったく同じことをすることになるのです。
 
-  - **Select** プロジェクトの `pageobjects` フォルダから `HeaderPo` (`header_po`) ファイルを取り出します
-  - **Drag** **Code**タブに `searchInput` (`_search_input`) を入力します
-  - **Click** ポップアップメニューの**Type into element** オプションを選択します
-  - **Name** 関数 `insertSearchText` (Pythonでは `insert_search_text`)
+- プロジェクトの `pageobjects` フォルダから `HeaderPo`(`header_po`)ファイルを**選択**します。
+- `searchInput`(`_search_input`)を **Code** タブに**ドラッグ**します。
+- ポップアップメニューの **Type into element** オプションを**クリック**します。
+- 関数に `insertSearchText` (Pythonでは `insert_search_text`) と名前を付けます。
 
 生成されたメソッドは、すぐに始められるシンプルな構成で、書かなければならないコードの量を節約することができます。
 
 テキストを送信したら、ENTER キーをクリックして検索を開始します。これを行うために、Sencha WebTestIt は `sendKeys` (`send_keys`) パラメータを自動的にメソッドに追加します。コードは以下のようになっているはずです。
 
+#### Java
 ```java
 public void insertSearchText(String text) {
   this.wait.until(ExpectedConditions.visibilityOfElementLocated(this.searchInput)).sendKeys(text, Keys.RETURN);
 }
 ```
 
+#### Python
 ```python
 def insert_search_text(self, text):
     self.wait.until(EC.visibility_of_element_located(self._search_input)).send_keys(text)
@@ -142,6 +144,7 @@ def insert_search_text(self, text):
     return self
 ```
 
+### TypeScript
 ```typescript
 public async insertSearchText(text: string): Promise {
   await browser.wait(ExpectedConditions.visibilityOf(element(this.searchInput)), browser.allScriptsTimeout, this.searchInput.toString());
@@ -155,8 +158,9 @@ public async insertSearchText(text: string): Promise {
 > 
 > 生成されたページオブジェクトのアクションは、テンプレートから作成されます。ウェブサイトやアプリケーションの要件に応じてテンプレートをカスタマイズすることができます。詳しくは、[このガイドの第3章でテンプレートをカスタマイズする](../PageObjects/ManagingPageObjects.md)を参照してください。
 
-`HeaderPo` ページオブジェクト内の残りの要素からテキストを取得します。上記の操作を繰り返しますが、今回はポップアップメニューの **Get element's text** オプションを使用してテキスト文字列を返すか、以下のソースコードをコピーしてください。
+`HeaderPo` ページオブジェクト内の残りのエレメントからテキストを取得します。上記の操作を繰り返しますが、今回はポップアップメニューの **Get element's text** オプションを使用してテキスト文字列を返すか、以下のソースコードをコピーしてください。
 
+#### Java
 ```java
 public String getCartAmount() {
   return this.wait.until(ExpectedConditions.visibilityOfElementLocated(this.cartAmount)).getText();
@@ -167,6 +171,7 @@ public String getCartCount() {
 }
 ```
 
+#### Python
 ```python
 def get_cart_amount(self):
     cart_count_count = self.wait.until(EC.visibility_of_element_located(self._cart_count)).text
@@ -179,6 +184,7 @@ def get_cart_count(self):
     return cart_count_text
 ```
 
+### TypeScript
 ```typescript
 public async getCartAmount(): Promise {
   await browser.wait(ExpectedConditions.visibilityOf(element(this.cartAmount)), browser.allScriptsTimeout, this.cartAmount.toString());
@@ -197,15 +203,16 @@ public async getCartCount(): Promise {
 
 | **Filename**             | **Description**                                           |
 | ------------------------ | --------------------------------------------------------- |
-| `getProductName`         | `productName` 要素のテキストを返します。            |
-| `getProductPrice`        | `productPrice`要素のテキストを返します。           |
+| `getProductName`         | `productName` エレメントのテキストを返します。            |
+| `getProductPrice`        | `productPrice`エレメントのテキストを返します。           |
 | `addProductToCart`       | `addToCartButton` をクリックします。              |
-| `getConfirmationMessage` | `cartConfirmationMessage`要素のテキストを返します。 |
+| `getConfirmationMessage` | `cartConfirmationMessage`エレメントのテキストを返します。 |
 
 *Pythonでは、関数名にそれぞれスネークケースを使用します。*
 
 最終的には、`DetailPagePo` のメソッドは以下のようになるはずです。
 
+#### Java
 ```java
 public String getProductName() {
   return this.wait.until(ExpectedConditions.visibilityOfElementLocated(this.productName)).getText();
@@ -224,6 +231,7 @@ public String getConfirmationMessage() {
 }
 ```
 
+#### Python
 ```python
 def get_product_name(self):
     product_name_text = self.wait.until(EC.visibility_of_element_located(self._product_name)).text
@@ -248,6 +256,7 @@ def get_confirmation_message(self):
     return cart_confirmation_message_text
 ```
 
+### TypeScript
 ```typescript
 public async getProductName(): Promise {
   await browser.wait(ExpectedConditions.visibilityOf(element(this.productName)), browser.allScriptsTimeout, this.productName.toString());
@@ -285,12 +294,13 @@ public async getConfirmationMessage(): Promise {
 > 
 > 実際のテストファイルは、Web サイトやアプリに対して実行されるアクションをオーケストレーションする必要があります。テストのメンテナンス性を確保するために、アクション自体はページオブジェクトに残しておくことをお勧めします。
 > 
-> 各テストケースの最も重要な部分は、ブロックの最後にあるアサーションです。これを使用して、ウェブサイトやアプリケーションの動作が期待される動作と一致しているかどうかを検証し、テストが失敗するかどうかを定義します。要素のアサーションには、さまざまな *Assertion Frameworks* が利用できます。
+> 各テストケースの最も重要な部分は、ブロックの最後にあるアサーションです。これを使用して、ウェブサイトやアプリケーションの動作が期待される動作と一致しているかどうかを検証し、テストが失敗するかどうかを定義します。エレメントのアサーションには、さまざまな *Assertion Frameworks* が利用できます。
 > 
 > Sencha WebTestIt は、選択したスクリプト言語に応じてアサーションフレームワークをプロジェクトにバンドルします。Java でテストを書くことを選択した場合は、TestNG フレームワークが提供されます。TypeScript を使用している場合、Protractor と [Jasmine](https://jasmine.github.io/) がデフォルトの設定です。Python の場合は unittest 環境が提供されています。ただし、個々のコンポーネントを切り替えることは可能です。
 
 使用する自動化フレームワークと言語に応じて、上の表のように3つのテストケースを作成します。
 
+#### Java
 ```java
 @Test
 public void SearchForItemTestCase() {
@@ -329,6 +339,7 @@ public void AddItemToCartTestCase() {
 }
 ```
 
+#### Python
 ```python
 def test_search_for_item(self):
 
@@ -373,6 +384,7 @@ def test_add_item_to_cart(self):
     self.assertEqual(header.get_cart_ammount(), "€1,500.00")
 ```
 
+### TypeScript
 ```typescript
 public async getProductName(): Promise {
   await browser.wait(ExpectedConditions.visibilityOf(element(this.productName)), browser.allScriptsTimeout, this.productName.toString());
@@ -429,7 +441,7 @@ public async getConfirmationMessage(): Promise {
 ここまでで次のことを学びました。
 
   - Sencha WebTestItでページオブジェクトを作成する方法
-  - 要素を手動で作成する方法
+  - エレメントを手動で作成する方法
   - ドラッグ＆ドロップを使ってページオブジェクトのアクションを素早く作成する方法
   - エンドポイントを作成してテストを実行する方法
 

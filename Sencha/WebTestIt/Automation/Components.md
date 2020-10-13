@@ -2,6 +2,7 @@
 
 エレメントとセレクタは、完全に機能するテストを構成する主なコンポーネントです。これらは、Web サイトやアプリを自動化するための基礎となります。以下の例のように、すべてを1つのテスト機能に落とし込んで、テストを開始することができます。
 
+#### Java
 ```java
 @Test
 public void checkCredentials() throws InterruptedException {
@@ -27,6 +28,7 @@ public void checkCredentials() throws InterruptedException {
 }
 ```
 
+#### Python
 ```python
 def test_check_credentials(self):
     driver = self.get_driver()
@@ -46,6 +48,7 @@ def test_check_credentials(self):
     self.assertEqual(result, "Your username is invalid!")
 ```
 
+#### TypeScript
 ```typescript
 it('should check credentials', async () => {
   const username = by.css('#username');

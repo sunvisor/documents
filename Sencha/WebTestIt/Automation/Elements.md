@@ -32,13 +32,13 @@ IDだけに頼ることができない場合には、UI階層内での配置や�
 
 > ![](https://docs.sencha.com/webtestit/guides/images/hint-icon.png) **Hint**
 > 
-> 推奨される要素セレクタの順序は、`id` \> `name` \> `CSS` \> `XPath` です。テスト用の堅牢なセレクタを生成するために、これを心に留めておいてください。
+> 推奨されるエレメントセレクタの順序は、`id` \> `name` \> `CSS` \> `XPath` です。テスト用の堅牢なセレクタを生成するために、これを心に留めておいてください。
 
 セレクターを作成するには、さまざまなアプローチを使うことができます。Google Chrome のようなブラウザでは、開発ツールからクリップボードにセレクタをコピーすることができます。
 
 ### Sencha WebTestIt の Element タブ
 
-**Elements** タブは、ページオブジェクト内の要素とセレクタを管理するために使用されます。現在開いているページオブジェクトと同期します。
+**Elements** タブは、ページオブジェクト内のエレメントとセレクタを管理するために使用されます。現在開いているページオブジェクトと同期します。
 
 ![](https://docs.sencha.com/webtestit/guides/images/elements-tab.png)
 
@@ -60,7 +60,7 @@ IDだけに頼ることができない場合には、UI階層内での配置や�
 
 ### エレメントを手動で追加する
 
-現在アクティブなページオブジェクトファイルに新しい要素を追加するには、以下の指示に従います。
+現在アクティブなページオブジェクトファイルに新しいエレメントを追加するには、以下の指示に従います。
 
 1.  **+** ボタンをクリックします。
 
@@ -75,7 +75,7 @@ IDだけに頼ることができない場合には、UI階層内での配置や�
 
 If you are using CSS as a strategy, you can specify multiple selectors to identify your element within your SUT. You will notice there is an **Additional Selector** field located. You can click **+** to add even more selectors if needed. You can click **–** to remove the selector in that respective line.
 
-ストラテジーとしてCSSを使用している場合、SUT内で要素を識別するために複数のセレクタを指定することができます。**Additional Selector** フィールドがあることにお気づきでしょう。必要に応じて、**+** をクリックしてさらにセレクタを追加することができます。**-** をクリックすると各行のセレクタを削除できます。
+ストラテジーとしてCSSを使用している場合、SUT内でエレメントを識別するために複数のセレクタを指定することができます。**Additional Selector** フィールドがあることにお気づきでしょう。必要に応じて、**+** をクリックしてさらにセレクタを追加することができます。**-** をクリックすると各行のセレクタを削除できます。
 
 ![](https://docs.sencha.com/webtestit/guides/images/css-multiple.png)
 
@@ -85,7 +85,7 @@ Sencha WebTestItの**Elements**タブは、ページオブジェクトファイ�
 
 ### スクリーンショットを手動で提供する
 
-手動および自動で生成される要素のために、独自のスクリーンショットを提供することができます。プロジェクト構造の中に `screenshots` フォルダがあり、そこには自動的に生成されるすべてのスクリーンショットが含まれています。このフォルダに独自のスクリーンショットを提供することも、別の場所を指定することもできます。
+手動および自動で生成されるエレメントのために、独自のスクリーンショットを提供することができます。プロジェクト構造の中に `screenshots` フォルダがあり、そこには自動的に生成されるすべてのスクリーンショットが含まれています。このフォルダに独自のスクリーンショットを提供することも、別の場所を指定することもできます。
 
 > ![](https://docs.sencha.com/webtestit/guides/images/hint-icon.png) **Hint**
 > 
@@ -99,4 +99,4 @@ Sencha WebTestItの**Elements**タブは、ページオブジェクトファイ�
 
 3.  `your/path/your_filename.png` をスクリーンショットの実際の場所に置き換えてください。
 
-4.  画像ファイルへのパスが正常に解決されると、Sencha WebTestItは、編集した要素のスクリーンショットインジケータを直ちにアクティブにします。
+4.  画像ファイルへのパスが正常に解決されると、Sencha WebTestItは、編集したエレメントのスクリーンショットインジケータを直ちにアクティブにします。

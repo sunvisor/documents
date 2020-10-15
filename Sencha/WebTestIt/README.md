@@ -1,6 +1,8 @@
 WebTestIt ドキュメント目次
 =======================
 
+オリジナル: https://docs.sencha.com/webtestit/index.html
+
 - Sencha WebTestIt を始める
     - [概要](./GettingStarted/Introduction.md)
     - [基礎](./GettingStarted/Fundamentals.md)
@@ -26,10 +28,10 @@ WebTestIt ドキュメント目次
     - [診断モード](./Maintenance/DiagnosticMode.md)
     - [ベストプラクティス](./Maintenance/BestPractices.md)
 - Advanced Topics
-    - [概要]()
-    - [上級者向けのコツ]()
-    - [Git を使ったソース管理]()
-    - [テストと課題管理との統合]()
+    - [概要](./AdvancedTopics/Introduction.md)
+    - [上級者向けの Tips \& Tricks](./AdvancedTopics/SenchaWebtestitAdvancedTipsTricks.md)
+    - [Git を使ったソース管理](./AdvancedTopics/SourceControlWithGit.md)
+    - [テストと課題管理との統合](./AdvancedTopics/IntegratingWithTestAndIssueManagement.md)
     - [CI 環境への統合]()
     - [テストレポートのカスタマイズ]()
     - [既存のプロジェクトで Sencha WebTestIt を使用する]()

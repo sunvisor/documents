@@ -1,5 +1,7 @@
 # Sencha WebTestIt の高度な Tips \& Tricks
 
+> オリジナル: [Sencha WebTestIt advanced tips \& tricks](https://docs.sencha.com/webtestit/guides/advanced-topics/sencha-webtestit-advanced-tips-tricks.html)
+
 このセクションを参照して、これまでの章では説明されていない Sencha WebTestIt エディタの高度な機能を確認してください。
 
 ### コマンドバー

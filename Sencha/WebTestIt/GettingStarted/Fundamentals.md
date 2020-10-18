@@ -1,6 +1,8 @@
 基礎
 ====
 
+> オリジナル: [Fundamentals](https://docs.sencha.com/webtestit/guides/getting-started/fundamentals.html)
+
 この章では、ウェブサイトやアプリをテストする際に必要となる一般的な用語や定義を紹介します。すぐに Sencha WebTestIt を使い始めたい場合は、この章をスキップして、最初のテストを作成するところから始めても構いません。
 
 なぜテスト自動化なのか？

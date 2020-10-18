@@ -1,5 +1,7 @@
 # WebDriver の実行についての説明
 
+> オリジナル: [The WebDriver execution explained](https://docs.sencha.com/webtestit/guides/running-tests/webdriver-execution.html)
+
 Selenium WebDriverは、自動化フレームワークをドライバと通信させるJSON-on-Wireプロトコル(RESTサービスに匹敵)を利用します。ドライバは、Web ブラウザや最終的には Web サイトやアプリケーションを自動化するインターフェイスや実行ファイルです。
 
 > ![](https://docs.sencha.com/webtestit/guides/images/note-icon.png) **Note**

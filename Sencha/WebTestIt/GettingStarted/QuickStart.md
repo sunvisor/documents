@@ -1,6 +1,8 @@
 クイックスタート: 最初のテストを作成する
 ================================
 
+> オリジナル: [Quickstart: Create your first test](https://docs.sencha.com/webtestit/guides/getting-started/quickstart.html)
+
 このチュートリアルでは、Sencha WebTestItを使って初めてのUIテストを作成します。このチュートリアルでは、DemoShopのサンプルの一部をステップバイステップで自動化していきます。
 
 このチュートリアルのリソースは、TypeScript、Java、Python で用意されています。

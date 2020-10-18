@@ -1,6 +1,8 @@
 Sencha WebTestItの設定
 =====================
 
+> オリジナル: [Setting up Sencha WebTestIt](https://docs.sencha.com/webtestit/guides/getting-started/setup.html)
+
 以下の手順に従って、Sencha WebTestIt をインストールし、最初のプロジェクトを作成します。
 
 ## 1. Sencha WebTestItをダウンロードしてインストールする

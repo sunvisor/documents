@@ -1,4 +1,6 @@
-# Python と Sencha WebTestItを使い始める
+# Python と Sencha WebTestIt を使い始める
+
+> オリジナル: [Getting started with Python and Sencha WebTestIt](https://docs.sencha.com/webtestit/guides/getting-started/getting-started-with-python-and-sencha-webtestit.html)
 
 Sencha WebTestIt は、Java、TypeScript、Pythonプログラミング言語をサポートする Protractor と Selenium を使用したテストのためのテスト自動化ツールセットとしてよく知られています。
 

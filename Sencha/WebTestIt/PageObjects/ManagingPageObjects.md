@@ -1,5 +1,7 @@
 # Sencha WebTestIt でページオブジェクトを管理する
 
+> オリジナル: [Managing page objects with Sencha WebTestIt](https://docs.sencha.com/webtestit/guides/page-objects/managing-page-objects.html)
+
 Sencha WebTestItは、ページオブジェクトの作成と管理のための強力なツールを提供します。Sencha WebTestItで直接*ページオブジェクトアクション*を生成するためにエレメントを使用することができます。ページオブジェクトパターンを使用して、ウェブアプリケーションの動作をシンプルなオブジェクトにモデル化し、"クリック "や "sendKeys "などのページオブジェクトアクションを実行して、論理的なユーザーインタラクションを構築することができます。
 
 > ![](https://docs.sencha.com/webtestit/guides/images/hint-icon.png) **Hint**

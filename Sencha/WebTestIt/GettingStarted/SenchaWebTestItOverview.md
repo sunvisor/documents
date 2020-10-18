@@ -1,6 +1,8 @@
 Sencha WebTestIt の概要
 ======================
 
+> オリジナル: [Sencha WebTestIt overview](https://docs.sencha.com/webtestit/guides/getting-started/overview.html)
+
 Sencha WebTestItは、プロジェクト内の現在アクティブなファイルに応じて動的に適応するタブ型のユーザーインターフェースを特徴としています。すべての機能はタブに配置されており、編集中のファイルの種類に応じて自動的にアクティブになります。私たちは、あなたが道を見つけるのに役立つように概要を作成しました。
 
 <img src="https://docs.sencha.com/webtestit/guides/images/overview-test-development.png" width="700px" />

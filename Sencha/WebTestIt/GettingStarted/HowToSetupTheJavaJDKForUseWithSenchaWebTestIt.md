@@ -1,5 +1,7 @@
 # Sencha WebTestItで使用する Java JDK のセットアップ方法
 
+> オリジナル: [How to setup the Java JDK for use with Sencha WebTestIt](https://docs.sencha.com/webtestit/guides/getting-started/how-to-setup-the-java-jdk-for-use-with-sencha-webtestit.html)
+
 > ![](https://docs.sencha.com/webtestit/guides/images/note-icon.png) **Note**
 > 
 > JDK バージョン 9 と 10 のサポートが終了し、それらのバージョンは Selenium のビルドをサポートしていないため、**JDK 11+** のバージョンをインストールして使用することをお勧めします。そうしないと、テストを実行しようとするとエラーが発生する可能性があります。これについての詳細な情報は [こちら](https://github.com/SeleniumHQ/selenium/wiki/Building-WebDriver) を参照してください。Sencha WebTestIt は JDK バージョン 8 でも動作します。

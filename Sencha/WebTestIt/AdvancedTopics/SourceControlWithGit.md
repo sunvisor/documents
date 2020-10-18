@@ -1,5 +1,7 @@
 # Git を使ったソース管理
 
+> オリジナル: [Source control with Git](https://docs.sencha.com/webtestit/guides/advanced-topics/source-control-with-git.html)
+
 [Git](https://git-scm.com/) をソース管理プロバイダとして使用している場合、Sencha WebTestItを使用して変更を追跡したり、ファイルのリビジョンを比較したりすることができます。ソース管理システムは、プロジェクトのファイルに発生したすべての変更のログとして機能します。ソフトウェアが進歩するとテストも進歩するので、複数のバージョンの自動テストを利用できるようにしておくと便利です。特にチームで作業している場合は、テストプロジェクトをソース管理下に置くことを強くお勧めします。Git の経験がない場合は、[Git 公式サイトのチュートリアル](https://git-scm.com/docs/gittutorial) をご覧ください。
 
 ### Git リポジトリの自動追跡

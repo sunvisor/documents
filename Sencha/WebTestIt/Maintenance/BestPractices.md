@@ -1,5 +1,7 @@
 # メンテナンスの労力を最小限に抑えるためのベストプラクティス
 
+> オリジナル: [Best practices for minimizing maintenance efforts](https://docs.sencha.com/webtestit/guides/maintenance/best-practices.html)
+
 UIテストを自動化する際に、ある時点でテストメンテナンスにぶつかることは否定できません。
 
 今日のところ、コードを変更する必要がないような一般的な方法で UI の動作を記述する技術的な可能性はありません。

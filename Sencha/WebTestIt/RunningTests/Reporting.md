@@ -1,5 +1,7 @@
 # 結果を得る
 
+> オリジナル: [Getting results](https://docs.sencha.com/webtestit/guides/running-tests/reporting.html)
+
 Sencha WebTestItはテスト実行ごとにレポートを作成します。テストを実行した後、**Project** タブの中にある `reports` フォルダを見つけます。そこにあるレポートファイルをクリックして、**Report** タブを開きます。
 
 > ![](https://docs.sencha.com/webtestit/guides/images/images/hint-icon.png) **Hint**

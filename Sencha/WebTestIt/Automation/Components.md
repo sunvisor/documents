@@ -1,5 +1,7 @@
 ## GUIテストのコンポーネント
 
+> オリジナル: [Components of a GUI test](https://docs.sencha.com/webtestit/guides/automation/components.html)
+
 エレメントとセレクタは、完全に機能するテストを構成する主なコンポーネントです。これらは、Web サイトやアプリを自動化するための基礎となります。以下の例のように、すべてを1つのテスト機能に落とし込んで、テストを開始することができます。
 
 #### Java

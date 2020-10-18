@@ -1,5 +1,7 @@
 # 診断モードでの実行
 
+> オリジナル: [Running in diagnostic mode](https://docs.sencha.com/webtestit/guides/maintenance/diagnostic-mode.html)
+
 診断モードはインタラクティブなテスト実行です。Sencha WebTestIt は開発者ツールを開いた状態でブラウザを開き、テスト実行に問題があった瞬間に実行を停止します。失敗したテスト実行のレポートを開くことで、診断モードを開始することができます。
 
 失敗した行を探して、**Run test in diagnostic mode** をクリックします。または、テストファイルの中で、特定のテスト方法を右クリックしてコンテキストメニューから同じことを行うこともできます。

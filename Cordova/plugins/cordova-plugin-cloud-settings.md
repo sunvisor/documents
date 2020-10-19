@@ -11,13 +11,13 @@ Android & iOS用のCordovaプラグインで、デバイスやインストール
 
 **目次**
 
-- [概要](#summary)
+- [概要](#概要)
   - [Android](#android)
   - [iOS](#ios)
-- [インストール](#installation)
-  - [プラグインのインストール](#install-the-plugin)
-  - [リモートビルド環境](#remote-build-environments)
-- [利用ライフサイクル](#usage-lifecycle)
+- [インストール](#インストール)
+  - [プラグインのインストール](#プラグインのインストール)
+  - [リモートビルド環境](#リモートビルド環境)
+- [利用ライフサイクル](#利用ライフサイクル)
 - [API](#api)
   - [`exists()`](#exists)
   - [`save()`](#save)
@@ -25,19 +25,19 @@ Android & iOS用のCordovaプラグインで、デバイスやインストール
   - [`onRestore()`](#onrestore)
   - [`enableDebug()`](#enabledebug)
 - [テストをする](#testing)
-  - [Android でテストする](#testing-android)
-  - [iOS でテストする](#testing-ios)
-- [サンプルプロジェクト](#example-project)
-- [GDPR に準拠したアナリティクスでの使用](#use-in-gdpr-compliant-analytics)
-  - [GDPR の背景](#gdpr-background)
-  - [アナリティクスにおけるユーザー追跡への影響](#impact-on-user-tracking-in-analytics)
+  - [Android でテストする](#android-でテストする)
+  - [iOS でテストする](#ios-でテストする)
+- [サンプルプロジェクト](#サンプルプロジェクト)
+- [GDPR に準拠したアナリティクスでの使用](#gdpr-に準拠したアナリティクスでの使用)
+  - [GDPR の背景](#gdpr-の背景)
+  - [アナリティクスにおけるユーザー追跡への影響](#アナリティクスにおけるユーザー追跡への影響)
   - [このプラグインを使うメリット](#benefits-of-using-this-plugin)
 - [Authors](#authors)
 - [Licence](#licence)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# 概要[](#summary)
+# 概要
 
 このプラグインは、ユーザーがアプリを再インストールしたり、別のデバイスにインストールしたりしても、設定は復元され、新しいインストールで利用できるように、JSON構造の形でキー/バリューのアプリ設定をクラウドストレージに保存する仕組みを提供します。
 
@@ -72,17 +72,17 @@ Note:
     - Xcode で App ID に iCloud を追加して iCloud 機能を有効化する方法は [こちら](https://theblog.github.io/post/swift-icloud-key-value-store/) を参照してください。
 
 
-# インストール[](#installation)
+# インストール
 
 プラグインは [cordova-plugin-cloud-settings](https://www.npmjs.org/package/cordova-plugin-cloud-settings) として npm に公開されています。
 
-## プラグインのインストール[](#install-the-plugin)
+## プラグインのインストール
 
 ```sh
 cordova plugin add cordova-plugin-cloud-settings --variable ANDROID_BACKUP_SERVICE_KEY="<API_KEY>"
 ```
 
-## リモートビルド環境[](#remote-build-environments)
+## リモートビルド環境
 
 iOS プラットフォームでは、Cordova で生成された XCode プロジェクトを手動で編集するか、本プラグインの[フックスクリプト](https://cordova.apache.org/docs/en/latest/guide/appdev/hooks/) を削除する必要があります。
 そのため、このプラグインは iOS プラットフォームのリモート ("クラウド") ビルド環境をサポートしていない環境では**動作しません**。
@@ -94,7 +94,7 @@ iOS プラットフォームでは、Cordova で生成された XCode プロジ�
 
 他のクラウドベースのCordova/Phonegapビルドサービスを使用していて、このプラグインが動作しないことに気付いた場合、その原因もおそらく同じです。
 
-# 利用ライフサイクル[](#usage-lifecycle)
+# 利用ライフサイクル
 
 典型的なライフサイクルは以下の通りです。
  - ユーザーが初めてアプリをインストールする
@@ -224,9 +224,9 @@ cordova.plugin.cloudsettings.enableDebug(function(){
 });
 ```
 
-# テストをする[](#testing)
+# テストをする
 
-## Android でテストする[](#testing-android)
+## Android でテストする
 
 ### バックアップのテスト
 設定のバックアップをテストするには、手動でバックアップマネージャーを起動して（[Androidドキュメント](https://developer.android.com/guide/topics/data/testingbackup) の指示に従って）、更新された値を強制的にバックアップする必要があります。
@@ -302,7 +302,7 @@ cordova.plugin.cloudsettings.enableDebug(function(){
     $ adb shell bmgr wipe [* transport-protocol] <APP_PACKAGE_ID>
 ```
 
-## iOS でテストする[](#testing-ios)
+## iOS でテストする
 
 ### バックアップのテスト
 
@@ -323,9 +323,9 @@ iCloud ですぐに強制的にバックアップを取るには（iOS 11の場�
 
 このプラグインの使用方法を説明/検証するプロジェクトの例は、ここにあります。[https://github.com/dpa99c/cordova-plugin-cloud-settings-test](https://github.com/dpa99c/cordova-plugin-cloud-settings-test)
 
-# GDPR に準拠したアナリティクスでの使用[](#use-in-gdpr-compliant-analytics)
+# GDPR に準拠したアナリティクスでの使用
 
-## GDPR の背景[](#gdpr-background)
+## GDPR の背景
 - EUの[一般データ保護規則(GDPR)](https://www.eugdpr.org/) が2018年5月25日から施行されました。
 - アプリやウェブサイトによる個人データの利用に関する厳格な規制を導入しています。
 - GDPR では、3種類のデータとそれに付随する義務を区別しています([参考](https://iapp.org/media/pdf/resource_center/PA_WP2-Anonymous-pseudonymous-comparison.pdf)) 。
@@ -343,7 +343,7 @@ iCloud ですぐに強制的にバックアップを取るには（iOS 11の場�
         - 例：ランダムに生成されたGUID
         - GDPR 義務なし
 
-## アナリティクスにおけるユーザー追跡への影響[](#impact-on-user-tracking-in-analytics)
+## アナリティクスにおけるユーザー追跡への影響
 - [アプリのインストールをまたいでユーザーIDを追跡するのに便利](https://support.google.com/analytics/answer/3123663)
 - ただし、GDPR は、Google Analytics や Firebase などの分析プラットフォームに送信された個人情報にも適用されます。
 - PII または仮名化されたデータ（ユーザーIDなど）を使用する場合、ユーザーに以下のメカニズムを提供することが GDPR によって義務付けられています。
